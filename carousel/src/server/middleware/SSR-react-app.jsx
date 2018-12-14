@@ -4,17 +4,17 @@ import { renderToString } from 'react-dom/server';
 import StaticRouter from 'react-router-dom/StaticRouter';
 import matchPath from 'react-router-dom/matchPath';
 
-import { makeRoutes, getRoutesConfig } from '../../app/routes';
+import MakeRoutes, { getRoutesConfig } from '../../app/routes';
 import render from '../utils/render';
 
 function getMatch(routesArray, url) {
   return routesArray
-    .find((route) => matchPath(url, { path: route.path, exact: route.exact, strict: false }));
+    .find(route => matchPath(url, { path: route.path, exact: route.exact, strict: false }));
 }
 
 const Markup = ({ url, context }) => (
   <StaticRouter location={url} context={context}>
-    {makeRoutes()}
+    <MakeRoutes />
   </StaticRouter>
 );
 

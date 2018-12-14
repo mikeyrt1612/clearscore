@@ -1,0 +1,41 @@
+$size: 400px;
+
+.carousel {
+  position: relative;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: 1px solid #a1a1a1;
+}
+
+.carousel__frost {
+  z-index: -99999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: no-repeat top;
+  background-size: cover;
+  background-image: url('/background--dashboard.png');
+  -webkit-clip-path: circle($size * 0.5);
+  clip-path: circle($size * 0.5);
+  filter: blur(12px);
+}
+
+.carousel__progress {
+  width: 400px;
+  height: 400px;
+}
+
+.carousel__credit-score {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+}

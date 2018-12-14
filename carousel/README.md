@@ -1,45 +1,20 @@
 ![ClearScore](https://github.com/ClearScore/tech-screen/blob/master/assets/clearscore.png)
 
-# Carousel
+# Carousel - [*** Live site ***](http://ec2-35-178-239-59.eu-west-2.compute.amazonaws.com/)
 
-## Purpose
 
-The purpose of the task is to increase familiarity between the developer and the code.
 
-We will be using the output of this task in the next step in the interview process.
+Hey guys. Thanks for taking the time to look over my application.
 
-## Time-frame
+This has been one of the more interesting tests I've taken. I didn't manage to get the task completely done, but I'm happy with what I managed to do, given the time frame.
 
-We expect this task to take *one evening* to complete.
+### Given a little more time I'd like to have added the following:
+  * Finish off the carousel with the animating screens
+  * Integration tests for the carousel component. (I like TestCafe. Please refer to my [*portfolio*](https://github.com/mikeyrt1612) for examples)
+  * It would have been really nice to add Typescript
 
-You do not have to complete all the tasks, but please be aware of [the purpose)(#purpose) above and take note of [what we're looking for](../README.md#what-were-looking-for)
+Obviously if you have any questions, please feel free to ask. Otherwise, I look forward to hearing from you soon.
 
-## Background
-
-A developer is halfway through a `score indicator feature` card and has been called away.
-
-It is now up to you to finish the feature ready to release.
-
-## The Task
-
-Build our circular score indicator, as shown on [clearscore.com/account/](https://www.clearscore.com/account/) and [https://youtu.be/tIjtcL5Z0Wk?t=5](https://youtu.be/tIjtcL5Z0Wk?t=5).
- * [Desktop example](/docs/score-indicator-desktop.jpg) 
- * [Mobile Example](/docs/score-indicator-mobile.jpg)
-
-Send your solution as a link to a public git repository with clear instructions and your thoughts in the README.
-
-The data can be requested from [https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json](https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json)
-
- 1. The carousel should contain at least 2 slides.
- 2. the slides should animate from slide 1 to slide 2
- 3. Slide 1 should show the 'score indicator'
- 4. Slide 2 should show 'long term debt'.
-
-### Stretch goal
-
- 1. Show the given score in the middle and with an arc outside that represents the score out of 700
- 2. The arc animates on load
- 3. Add a bouncing effect to the end of the animation of the arc
 
 ## Prerequisites
 
@@ -51,3 +26,8 @@ The data can be requested from [https://s3.amazonaws.com/cdn.clearscore.com/nati
  * Run: `yarn start:webpack`
  * Run: `yarn start:dev` _(in a new terminal)_
  * Goto: `http://localhost:3000/`
+
+## Running the tests/linter
+
+ * Run: `yarn test`
+ * Run: `yarn lint`

@@ -1,8 +1,7 @@
 require('./src/config/environment');
-const defaultConfig = require('./webpack.common');
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.common');
 
-const prodConfig = Object.assign({}, defaultConfig, {
+module.exports = merge(baseConfig, {
   mode: 'production',
-});
-
-module.exports = prodConfig;
+})

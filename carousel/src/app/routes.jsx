@@ -2,10 +2,11 @@ import React from 'react';
 import Route from 'react-router-dom/Route';
 import Switch from 'react-router-dom/Switch';
 import DocumentMeta from 'react-document-meta';
+import PropTypes from 'prop-types';
 
-import MainLayout from './Layouts/MainLayout';
-import Dashboard from './components/Dashboard/Dashboard';
-import NotFound from './components/NotFound/NotFound';
+import MainLayout from './components/layouts/MainLayout';
+import DashboardPage from './components/pages/DashboardPage';
+import NotFoundPage from './components/pages/NotFoundPage';
 
 export const getRoutesConfig = () => [
   {
@@ -23,25 +24,33 @@ export const getRoutesConfig = () => [
       title: 'ClearScore Assessment - Dashboard',
     },
     label: 'Dashboard',
-    component: Dashboard,
+    component: DashboardPage,
   },
 ];
 
-export function makeRoutes() {
-  return (
-    <MainLayout>
-      <Switch>
-        {getRoutesConfig().map(({ component: Component, meta, ...props }) => (
-          <Route
-            {...props}
-            key={props.name}
-            render={(matchProps) => (
-              <><DocumentMeta {...meta} /><Component {...matchProps} /></>
-            )}
-          />
-        ))}
-        <Route title="Page Not Found" component={NotFound} />
-      </Switch>
-    </MainLayout>
-  );
-}
+const MakeRoutes = () => (
+  <MainLayout>
+    <Switch>
+      {getRoutesConfig().map(({ component: Component, meta, ...props }) => (
+        <Route
+          {...props}
+          key={props.name}
+          render={matchProps => (
+            <><DocumentMeta {...meta} /><Component {...matchProps} /></>
+          )}
+        />
+      ))}
+      <Route title="Page Not Found" component={NotFoundPage} />
+    </Switch>
+  </MainLayout>
+);
+
+MakeRoutes.defaultProps = {
+  name: 'default',
+};
+
+MakeRoutes.propTypes = {
+  name: PropTypes.string,
+};
+
+export default MakeRoutes;

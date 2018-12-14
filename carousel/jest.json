@@ -14,9 +14,11 @@
     "\\.(css|scss)$": "<rootDir>/tests/config/jest/styleMock.js"
   },
   "modulePathIgnorePatterns": ["<rootDir>/compiled/"],
-  "testRegex": "(/__tests__/.*(^scenarios)|(\\.|/)(func|spec))\\.jsx?$",
+  "testMatch": ["**/__tests__/*.+(js|jsx)"],
   "setupFiles": [
     "<rootDir>/tests/config/jest/reactShim.js",
     "<rootDir>/tests/config/jest/enzymeSetup.js"
-  ]
+  ],
+  "testURL": "http://localhost/",
+  "setupTestFrameworkScriptFile": "<rootDir>/tests/config/jest/setupTestFramework.js"
 }

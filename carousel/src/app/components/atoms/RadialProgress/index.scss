@@ -1,0 +1,19 @@
+@import '../../../../styles/utils/colours';
+
+.radial-progress {
+	margin: -15px;
+}
+
+.radial-progress__fill {
+	fill: rgba(0, 0, 0, 0);
+	stroke-width: .8;
+	-webkit-transform: rotate(90deg)translate(0px, -80px);
+	-ms-transform: rotate(90deg)translate(0px, -80px);
+	transform: rotate(90deg)translate(0px, -80px);
+	stroke: $score;
+	stroke-dasharray: 219.99078369140625;
+	stroke-dashoffset: -219.99078369140625;
+	// -webkit-transition: stroke-dashoffset .75s;
+	// -ms-transition: stroke-dashoffset .75s;
+	// transition: stroke-dashoffset .75s;
+}

@@ -9,9 +9,9 @@ function renderPage(page) {
 }
 
 const render = ({ error, ...props }) => (
-  error ?
-    renderPage(<Error500 error={error} />) :
-    renderPage(<Html {...props} />)
+  error
+    ? renderPage(<Error500 error={error} />)
+    : renderPage(<Html {...props} />)
 );
 
 export default render;

@@ -1,0 +1,23 @@
+@import '../../../../styles/utils/colours';
+
+.credit-score {
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+}
+
+.credit-score__score {
+  font-family: GillSans;
+  font-size: 4.5em;
+  font-weight: 1;
+  color: $score;
+}
+
+.credit-score__max-score {
+  margin-top: -10px;
+}
+
+.credit-score__summary {
+  color: $score;
+  margin-top: 30px;
+}
